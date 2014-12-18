@@ -1,10 +1,8 @@
 <template name="adminEntitiesCreate">
-	
-	<h3>
-		Create a new {{ entity.options.singularName }}
-	</h3>
-	<hr>
-
-	{{> quickForm collection=entity.collection id="createEntityForm" type="insert" omitFields="createdAt,updatedAt" }}
-
+	<div class="admin-top-nav">
+		<span class="title">Create a new {{ entity.options.singularName }}</span>
+	</div>
+	<div class="admin-content">
+		{{> quickForm collection=entity.collection id="createEntityForm" type="insert" omitFields="createdAt,updatedAt" }}
+	</div>
 </template>

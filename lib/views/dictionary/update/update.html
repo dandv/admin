@@ -1,12 +1,13 @@
 <template name="adminDictionaryUpdate">
-	<h3>Dictionary</h3>
-	<div class="dictionary-categories">
-		{{# each allCategories }}
-			<span class="label {{ isActiveCategory }}"><a href="{{ pathFor 'adminDictionaryUpdate' category=this }}">{{ this }}</a></span>
-		{{/ each }}
+	<div class="admin-top-nav">
+		<div class="dictionary-categories pull-right">
+			{{# each allCategories }}
+				<span class="label {{ isActiveCategory }}"><a href="{{ pathFor 'adminDictionaryUpdate' category=this }}">{{ this }}</a></span>
+			{{/ each }}
+		</div>
+		<span class="title">Dictionary</span>
 	</div>
-
-	<hr>
-
-	{{> quickForm buttonContent="Save" collection="orion.dictionary.collection" id="updateDictionaryForm" type="update" doc=getDoc fields=fields }}
+	<div class="admin-content">
+		{{> quickForm buttonContent="Save" collection="orion.dictionary.collection" id="updateDictionaryForm" type="update" doc=getDoc fields=fields }}
+	</div>
 </template>

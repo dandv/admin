@@ -233,6 +233,10 @@
       "0.0.6"
     ],
     [
+      "orionjs:styles",
+      "0.0.1"
+    ],
+    [
       "random",
       "1.0.1"
     ],
@@ -270,7 +274,7 @@
     ],
     [
       "softwarerero:accounts-t9n",
-      "1.0.2"
+      "1.0.4"
     ],
     [
       "spacebars",
@@ -306,11 +310,11 @@
     ],
     [
       "useraccounts:bootstrap",
-      "1.2.3"
+      "1.4.0"
     ],
     [
       "useraccounts:core",
-      "1.2.3"
+      "1.4.0"
     ],
     [
       "webapp",
