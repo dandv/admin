@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'orionjs:admin',
 	summary: 'Simple CMS for meteor',
-	version: '0.1.3',
+	version: '0.1.4',
 	git: 'https://github.com/orionjs/admin'
 });
 
