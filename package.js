@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'orionjs:admin',
 	summary: 'Simple and powerful admin generator',
-	version: '0.3.1',
+	version: '0.3.2',
 	git: 'https://github.com/orionjs/admin'
 });
 
