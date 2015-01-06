@@ -2,12 +2,18 @@
 	<ul class="nav nav-stacked">
 
         <li class="{{ isActiveRoute regex='adminDictionary' }}">
-            <a href="{{ pathFor 'adminDictionaryUpdate' }}">Dictionary</a>
+            <a href="{{ pathFor 'adminDictionaryUpdate' }}">
+                <span class="fa fa-fw fa-book"></span>
+                Dictionary
+            </a>
         </li>
 
         {{# each getEntities }}
 			<li class="{{ isActivePath regex=getPath }}">
-            	<a href="{{ pathFor 'adminEntitiesIndex' entity=name }}">{{ options.sidebarName }}</a>
+            	<a href="{{ pathFor 'adminEntitiesIndex' entity=name }}">
+                    <span class="fa fa-fw fa-{{ options.icon }}"></span>
+                    {{ options.sidebarName }}   
+                </a>
         	</li>
 		{{/ each }}
 
@@ -16,17 +22,26 @@
         {{/ if }}
         {{# each sidebarTabs }}
             <li class="{{ isActiveRoute regex=activeRouteRegex }}">
-                <a href="{{ pathFor routeName }}">{{ navbarTitle }}</a>
+                <a href="{{ pathFor routeName }}">
+                    <span class="fa fa-fw fa-{{ icon }}"></span>
+                    {{ navbarTitle }}
+                </a>
             </li>
         {{/ each }}
        
         <li class="nav-divider"></li>
 
         <li class="{{ isActiveRoute regex='atChangePwd' }}">
-            <a href="{{ pathFor 'atChangePwd' }}">Change Password</a>
+            <a href="{{ pathFor 'atChangePwd' }}">
+                <span class="fa fa-fw fa-key"></span>
+                Change Password
+            </a>
         </li>
         <li>
-            <a id="logout-btn">Logout</a>
+            <a id="logout-btn">
+                <span class="fa fa-fw fa-power-off"></span>
+                Logout
+            </a>
         </li>
     </ul>
 	
