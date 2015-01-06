@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'orionjs:admin',
 	summary: 'Simple and powerful admin generator',
-	version: '0.3.2',
+	version: '0.4.0',
 	git: 'https://github.com/orionjs/admin'
 });
 
@@ -20,7 +20,6 @@ Package.onUse(function(api) {
 		'zimme:iron-router-active@1.0.0', 
 		'aldeed:delete-button@1.0.0', 
 		'useraccounts:bootstrap@1.2.3',
-		'orionjs:styles@0.0.2',
 		'manuelschoebel:ms-seo@0.4.1',
 		]);
 
@@ -48,9 +47,11 @@ Package.onUse(function(api) {
 		'lib/views/base/accounts/formTemplate.less',
 		'lib/views/base/footer/footer.html',
 		'lib/views/base/header/header.html',
-		'lib/views/base/layout/layout.html',
-		'lib/views/base/layout/layout.js',
-		'lib/views/base/layout/layout.less',
+		'lib/views/base/layouts/admin/layout.html',
+		'lib/views/base/layouts/admin/layout.js',
+		'lib/views/base/layouts/admin/layout.less',
+		'lib/views/base/layouts/out-admin/layout.html',
+		'lib/views/base/layouts/out-admin/layout.js',
 		'lib/views/base/loading/loading.html',
 		'lib/views/base/loading/loading.js',
 		'lib/views/base/loading/loading.less',
@@ -69,6 +70,10 @@ Package.onUse(function(api) {
 		'lib/views/entities/index/index.less',
 		'lib/views/entities/update/update.html',
 		'lib/views/entities/update/update.js',
+		'lib/views/accounts/setup/setup.html',
+		'lib/views/accounts/setup/setup.js',
+		'lib/views/accounts/login/login.html',
+		'lib/views/accounts/login/login.js',
 
 		], 'client');
 
