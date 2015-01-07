@@ -29,11 +29,11 @@
         {{/ each }}
        
         <li class="nav-divider"></li>
-
-        <li class="{{ isActiveRoute regex='atChangePwd' }}">
+        
+        <li class="{{ isActiveRoute regex='adminConfig' }}{{ isActiveRoute regex='changePwd' }}">
             <a href="{{ pathFor 'atChangePwd' }}">
-                <i class="fa fa-li fa-key"></i>
-                <span class="text">Password</span>
+                <i class="fa fa-li fa-cog"></i>
+                <span class="text">Config</span>
             </a>
         </li>
         <li>

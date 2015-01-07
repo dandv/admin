@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'orionjs:admin',
 	summary: 'Simple and powerful admin generator',
-	version: '0.5.0',
+	version: '0.5.1',
 	git: 'https://github.com/orionjs/admin'
 });
 
@@ -42,9 +42,6 @@ Package.onUse(function(api) {
 	api.addFiles([
 		'.npm/package/node_modules/spin.js/spin.js',
 
-		'lib/views/base/accounts/formTemplate.html',
-		'lib/views/base/accounts/formTemplate.js',
-		'lib/views/base/accounts/formTemplate.less',
 		'lib/views/base/footer/footer.html',
 		'lib/views/base/header/header.html',
 		'lib/views/base/layouts/admin/layout.html',
@@ -61,6 +58,12 @@ Package.onUse(function(api) {
 		'lib/views/dictionary/update/update.html',
 		'lib/views/dictionary/update/update.js',
 		'lib/views/dictionary/update/update.less',
+		'lib/views/config/password/password.html',
+		'lib/views/config/password/password.js',
+		'lib/views/config/password/password.less',
+		'lib/views/config/update/update.html',
+		'lib/views/config/update/update.js',
+		'lib/views/config/update/update.less',
 		'lib/views/entities/create/create.html',
 		'lib/views/entities/create/create.js',
 		'lib/views/entities/delete/delete.html',

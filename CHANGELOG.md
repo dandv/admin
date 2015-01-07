@@ -3,6 +3,10 @@ Orion Admin
 
 This is the changelog for ```orionjs:admin```.
 
+### 0.5.1
+
+- Introducing ``` orion.config```. See documentation on http://orion.meteor.com/docs/extras/config.
+
 ### 0.5.0
 
 - New styles.
