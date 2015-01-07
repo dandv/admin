@@ -8,7 +8,7 @@ Creates automatically a admin panel for your
 collections and gives you the ability to have
 key/value definitions for your site.
 
-![alt tag](http://i.imgur.com/aTG9iF5.png)
+![alt tag](http://i.imgur.com/eNMaaje.png)
 
 ## Features
 
@@ -53,3 +53,9 @@ Go to the [documentation](http://orion.meteor.com/docs/dictionary) and learn how
 #### View the example
 
 View the [example blog](https://github.com/orionjs/example-blog) made with orion
+
+## Screenshots
+
+![alt tag](http://i.imgur.com/eFEQ5lT.jpg)
+![alt tag](http://i.imgur.com/eNMaaje.png)
+![alt tag](http://i.imgur.com/Rl3Mpvi.jpg)
