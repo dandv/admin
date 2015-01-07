@@ -1,18 +1,17 @@
 <template name="adminSidebar">
-	<ul class="nav nav-stacked">
-
+	<ul class="fa-ul">
         <li class="{{ isActiveRoute regex='adminDictionary' }}">
             <a href="{{ pathFor 'adminDictionaryUpdate' }}">
-                <span class="fa fa-fw fa-book"></span>
-                Dictionary
+                <i class="fa fa-li fa-book"></i>
+                <span class="text">Dictionary</span>
             </a>
         </li>
 
         {{# each getEntities }}
 			<li class="{{ isActivePath regex=getPath }}">
             	<a href="{{ pathFor 'adminEntitiesIndex' entity=name }}">
-                    <span class="fa fa-fw fa-{{ options.icon }}"></span>
-                    {{ options.sidebarName }}   
+                    <i class="fa fa-li fa-{{ options.icon }}"></i>
+                    <span class="text">{{ options.sidebarName }}</span>
                 </a>
         	</li>
 		{{/ each }}
@@ -23,8 +22,8 @@
         {{# each sidebarTabs }}
             <li class="{{ isActiveRoute regex=activeRouteRegex }}">
                 <a href="{{ pathFor routeName }}">
-                    <span class="fa fa-fw fa-{{ icon }}"></span>
-                    {{ navbarTitle }}
+                    <i class="fa fa-li fa-{{ icon }}"></i>
+                    <span class="text">{{ navbarTitle }}</span>
                 </a>
             </li>
         {{/ each }}
@@ -33,14 +32,14 @@
 
         <li class="{{ isActiveRoute regex='atChangePwd' }}">
             <a href="{{ pathFor 'atChangePwd' }}">
-                <span class="fa fa-fw fa-key"></span>
-                Change Password
+                <i class="fa fa-li fa-key"></i>
+                <span class="text">Password</span>
             </a>
         </li>
         <li>
             <a id="logout-btn">
-                <span class="fa fa-fw fa-power-off"></span>
-                Logout
+                <i class="fa fa-li fa-power-off"></i>
+                <span class="text">Logout</span>
             </a>
         </li>
     </ul>

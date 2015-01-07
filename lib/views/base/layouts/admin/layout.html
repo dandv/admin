@@ -1,24 +1,30 @@
 <template name="adminLayout">
-	<!--[if lt IE 9]>
-	<p class="browser-warning"><strong><i class="icon-exclamation-sign"></i> Warning</strong> - You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to properly view this website.</p>
-	<![endif]-->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<div id="orion-admin">
-		{{> adminHeader }}
 		{{# if currentUser }}
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-md-2 sidebar">
-						{{> adminSidebar }}
+					<div class="col-md-2 col-sm-3">
+						<div class="sidebar">
+							{{> adminSidebar }}
+						</div>
 					</div>
-					<div class="col-md-10 col-md-offset-2 orion-layout">
-						{{> yield }}
+					<div class="col-md-10 col-sm-9">
+						<div class="orion-layout">
+							{{> yield }}
+						</div>
 					</div>
 				</div>
 			</div>
 		{{ else }}
 			{{> yield }}
 		{{/ if }}
-		{{> adminFooter }}
 	</div>
+	<style type="text/css">
+	html,
+	body {
+		height: 100%;
+		-webkit-overflow-scrolling: touch;
+	}
+	</style>
+	<meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,maximum-scale=1.0,user-scalable=no">
 </template>

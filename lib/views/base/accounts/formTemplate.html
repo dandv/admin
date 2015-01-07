@@ -1,42 +1,56 @@
 <template name="accountsFormTemplate">
-
 	{{#unless hide}}
-		<div id="orion-admin">
+		<div>
 			<div class="admin-top-nav">
 				{{#if showTitle}}
-					{{> accountsFormTemplateTitle}}
+					<span class="title">{{title}}</span>
 				{{/if}}
 			</div>
-			<div class="admin-content">
-				{{#if showOauthServices}}
-					{{> atOauth}}
-				{{/if}}
-				{{#if showServicesSeparator}}
-					{{> atSep}}
-				{{/if}}
-				{{#if showError}}
-					{{> atError}}
-				{{/if}}
-				{{#if showResult}}
-					{{> atResult}}
-				{{/if}}
-				{{#if showPwdForm}}
-					{{> atPwdForm}}
-				{{/if}}
-				{{#if showSignInLink}}
-					{{> atSigninLink}}
-				{{/if}}
-				{{#if showSignUpLink}}
-					{{> atSignupLink}}
-				{{/if}}
-				{{#if showTermsLink}}
-					{{> atTermsLink}}
-				{{/if}}
+			<div class="admin-content admin-content-less-padding">
+				<div class="row">
+					<div class="col-lg-6 col-lg-offset-3">
+						{{#if showOauthServices}}
+							{{> atOauth}}
+						{{/if}}
+						{{#if showServicesSeparator}}
+							{{> atSep}}
+						{{/if}}
+						{{#if showError}}
+							{{> atError}}
+						{{/if}}
+						{{#if showResult}}
+							{{> atResult}}
+						{{/if}}
+						{{#if showPwdForm}}
+							<div class="at-pwd-form">
+								<form role="form" id="at-pwd-form" novalidate action="#" method="POST">
+									<fieldset {{disabled}}>
+										{{#each fields}}
+											{{> atInput}}
+										{{/each}}
+										{{#if showForgotPasswordLink}}
+											{{> atPwdLink}}
+										{{/if}}
+										<br>
+										<button type="submit" class="at-btn submit btn btn-lg btn-block btn-primary {{submitDisabled}}" id="at-btn">
+											{{buttonText}}
+										</button>
+									</fieldset>
+								</form>
+							</div>
+						{{/if}}
+						{{#if showSignInLink}}
+							{{> atSigninLink}}
+						{{/if}}
+						{{#if showSignUpLink}}
+							{{> atSignupLink}}
+						{{/if}}
+						{{#if showTermsLink}}
+							{{> atTermsLink}}
+						{{/if}}
+					</div>
+				</div>
 			</div>
 		</div>
 	{{/unless}}
-</template>
-
-<template name="accountsFormTemplateTitle">
-	<span class="title">{{title}}</span>
 </template>

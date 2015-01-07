@@ -3,6 +3,10 @@ Orion Admin
 
 This is the changelog for ```orionjs:admin```.
 
+### 0.5.0
+
+- New styles.
+
 ### 0.4.1
 
 - Added icons to the sidebar. To set a icon to a entity add the ```icon``` key to the entity options. Only FontAwesome is supported.
